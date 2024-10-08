@@ -2,6 +2,11 @@
  * almacenamos todos los procesos correspondientes de categorias
  **/
 package logica;
+import funciones.Funciones;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * esta es la clase categorias, almacena los datos de categorias
@@ -9,32 +14,37 @@ package logica;
  * @since 4/10/2024
  **/
 public class Categorias {
-    
-    public int IDcategorias;
-    public String nombre;
-    
-    public Categorias(){
+    Funciones fun = new Funciones();
+
+    public void verificacionC(){
+        
+        File file = new File("C:\\Users\\labor\\OneDrive\\Escritorio\\UMG 2\\Algoritmos\\proyecto de semestre\\proyecto\\ProyectAlgoritmos\\src\\db\\categorias.TXT");
+        
+        //conprovamos que el archivo categorias exista y si no crea un nuevo archivo
+        if (file.exists() == false){
+            try {
+                file.createNewFile();
+                
+            } catch (IOException ex) {
+                Logger.getLogger(Categorias.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
     }
     
-    
-    public Categorias(int IDcategorias, String nombre){
-        this.IDcategorias = IDcategorias;
-        this.nombre = nombre;
-    }
-    
-    public int getIDcategorias(int IDcategorias){
-        return IDcategorias;
-    }
-    
-    public void setIDcategorias(){
-        this.IDcategorias = IDcategorias;
-    }
-    
-    public String getNombre(String nombre){
-        return nombre;
-    }
-    
-    public void setNombre(){
-        this.nombre = nombre;
+    public void verificacionP(){
+        
+        File file = new File("C:\\Users\\labor\\OneDrive\\Escritorio\\UMG 2\\Algoritmos\\proyecto de semestre\\proyecto\\ProyectAlgoritmos\\src\\db\\productos.TXT");
+        
+        //conprovamos que el archivo categorias exista y si no crea un nuevo archivo
+        if (file.exists() == false){
+            try {
+                file.createNewFile();
+                
+            } catch (IOException ex) {
+                Logger.getLogger(Categorias.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
     }
 }

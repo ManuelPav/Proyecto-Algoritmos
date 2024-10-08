@@ -5,11 +5,9 @@
        
 package Principal;
 
-//importamos la clase interfas para acceder a las funcionalidades
+//importamos las clases que nos sirvan
 import interfas.Login; 
-
-import registros.DatosC;
-
+import logica.Categorias;
 
 public class Principal {
     
@@ -18,11 +16,12 @@ public class Principal {
     public static void main(String[] args){
         
         Login login = new Login();
-        DatosC datosC = new DatosC();
-        
         login.setVisible(true);
         login.setLocationRelativeTo(null);  
         
-        datosC.CreateFile();
+        Categorias categorias = new Categorias();
+        categorias.verificacionC();
+        categorias.verificacionP();
+        
     }  
 }
