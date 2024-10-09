@@ -19,9 +19,9 @@ public class Principal {
         login.setVisible(true);
         login.setLocationRelativeTo(null);  
         
-        Categorias categorias = new Categorias();
-        categorias.verificacionC();
-        categorias.verificacionP();
+//        Categorias categorias = new Categorias();
+//        categorias.verificacionC();
+//        categorias.verificacionP();
         
     }  
 }
